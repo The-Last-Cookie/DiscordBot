@@ -1,7 +1,11 @@
-package main;
+/*
+    Made by: The-Last-Cookie
+    Date: 5th March 2019
+    Licensed under the GNU General Public License v3.0
 
-//import events.GuildMemberLeave;
-//import events.GuildMessageReceived;
+ */
+
+package main;
 
 import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.*;
@@ -9,15 +13,9 @@ import commands.*;
 import games.*;
 import events.*;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 public class main {
 
     public static JDA jda;
-    public int a = 0;
-    //setTimer(); //for serverInfo - Bot running since
-    //startTimer();
 
     public static void main(String args[]) throws Exception {
 
@@ -34,21 +32,5 @@ public class main {
         jda.addEventListener(new oracle());
         jda.addEventListener(new wordFilter());
         jda.addEventListener(new toggleFilter());
-
-        //jda.addEventListener(new GuessTheNumber());
-        //jda.addEventListener(new GuildMemberLeave());
-        //jda.addEventListener(new GuildMessageReceived());
     }
-
-    /*public void startTimer() {
-        //every second do a++;
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
-
-            }
-        };
-        timer.schedule(task, 1000, 1000);
-    }*/
 }

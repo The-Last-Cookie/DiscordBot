@@ -14,8 +14,8 @@ public class wordFilter extends ListenerAdapter {
         if (filterOn == true) {
             String args[] = event.getMessage().getContentRaw().split("\\s+");
 
-            String[] words = new String[] {
-                    "Flittchen", "ass", "slut"
+            String[] words = new String[]{
+                    "shit", "noob" //and many more
             };
 
             for (int i = 0; i < args.length; i++) {
@@ -23,24 +23,9 @@ public class wordFilter extends ListenerAdapter {
                     if (args[i].contains(words[j])) {
                         event.getMessage().delete().queue();
                         event.getChannel().sendMessage(event.getAuthor().getAsMention() + ", watch your language dude!").complete().delete().queueAfter(5, TimeUnit.SECONDS);
-
-                        //mute member for 20 seconds
-                        //event.getGuild().getController().addRolesToMember(event.getMember(), event.getGuild().getRolesByName("Muted", true)).complete();
-                        /*event.getGuild().getController().addSingleRoleToMember(event.getMessage().getMentionedMembers().get(0), event.getGuild().getRoleById("Muted")).queue();
-                        try {
-                            Thread.sleep(20000);
-                        }
-                        catch(InterruptedException e) {
-                            System.out.println("InterruptedException");
-                            event.getGuild().getController().addSingleRoleToMember(event.getMessage().getMentionedMembers().get(0), event.getGuild().getRoleById("Member")).queue();
-                        }*/
                     }
                 }
             }
         }
     }
-
-    /*public void unmute() {
-
-    }*/
 }

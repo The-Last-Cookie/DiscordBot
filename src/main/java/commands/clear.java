@@ -20,7 +20,7 @@ public class clear extends ListenerAdapter {
             if (event.getMember().hasPermission(event.getChannel(), Permission.ADMINISTRATOR)) {
                 try {
                     try {
-                        int number = Integer.parseInt(args[1]);
+                        int number = Integer.parseInt(args[1]); //testing if args[1] is an integer
 
                         List<Message> messages = event.getChannel().getHistory().retrievePast(Integer.parseInt(args[1]) + 1).complete();
                         event.getChannel().deleteMessages(messages).queue();

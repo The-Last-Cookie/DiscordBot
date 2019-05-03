@@ -27,7 +27,6 @@ public class info extends ListenerAdapter {
                             .addField("Nickname", name.getNickname() == null ? "The user has no nickname" : name.getNickname(), false)
                             .addField("Joined on", name.getJoinDate().format(fmt), false)
                             .addField("Role", getRoles(name), false)
-                            //.addField("Rank", "current Rank", false)
                             .addField("Status", onlineStatus(name), false)
                             .addField("Game", displayGameInfo(name), false)
                             .setThumbnail(name.getUser().getAvatarUrl())
@@ -35,20 +34,6 @@ public class info extends ListenerAdapter {
 
                     event.getChannel().sendMessage(info.build()).queue();
                     info.clear();
-                } else if(args[1].equalsIgnoreCase("server")) {
-                    //serverInfo
-                    //could do for ServerInfo: how many are online? how many are in a specific guild?
-                    EmbedBuilder serverInfo = new EmbedBuilder()
-                            .setTitle("Server Information")
-                            .addField("User currently on this server", "There are currently " + event.getJDA().getUsers().size() + " users on this server", false)
-                            .addField("User currently online", "There are currently " + event.getChannel().getJDA().getUsers().size() + " users online", false)
-                            .addField("User currently in the guild", "", false)
-                            .addField("Bot", "running since", false) //main.a
-                            .addField("Server owner", "TheLastCookie", false)
-                            .setColor(0xf45642);
-
-                    event.getChannel().sendMessage(serverInfo.build()).queue();
-                    serverInfo.clear();
                 } else {
                     //usage
                     EmbedBuilder info = new EmbedBuilder()

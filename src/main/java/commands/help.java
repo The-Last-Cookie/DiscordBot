@@ -5,21 +5,7 @@ import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class help extends ListenerAdapter {
-
-    //a.addField("", "", false); true means it is how float:left in css
-
-    //Date date = new Date(); System.out.println("[Info: " + date.toString() + "] Command 'help' got executed successfully."); //this works good
-    //SimpleDateFormat a = new SimpleDateFormat("MM/dd/yyyy");
-    //SimpleDateFormat b = new SimpleDateFormat("HH:mm:ss");
-
-    //if (event.getMember().hasPermission(event.getChannel(), Permission.ADMINISTRATOR)) {
-    //if (event.getMember().getRoles().contains("Admin")) {
-
-    //TODO categorising? like on help page 1 are only commands for members and on the last page are commands for admins
 
     @Override
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
@@ -47,12 +33,10 @@ public class help extends ListenerAdapter {
                                 .setTitle("Commands")
                                 .setDescription("Page 1")
                                 .addField(Static.prefix + "clear", "Deletes messages", false)
-                                //.addField(Static.prefix + "gtn", "Guess a number", false)
                                 .addField(Static.prefix + "help", "View all available commands", false)
-                                .addField(Static.prefix + "userinfo", "Gives back information about a specific user", false)
+                                .addField(Static.prefix + "info", "Gives back information about a specific user", false)
                                 .addField(Static.prefix + "oracle", "Ask the oracle a yes/no question", false)
                                 .addField(Static.prefix + "ping", "Gives back 'Pong!'", false)
-                                .addField(Static.prefix + "serverinfo", "Gives back information about the server", false)
                                 .addField(Static.prefix + "togglefilter", "Enables/disables the word filter", false);
 
                         event.getChannel().sendMessage(help1.build()).queue();
