@@ -1,5 +1,5 @@
 # DiscordBot
-This is a Discord bot programmed bot for your own use. It is licensed under the GNU General Public License v3.0. You can download, edit and copy it for your own use. I would really appreciate it if you would link to my profile and not to say that it's your own work.
+This is a programmed Discord bot for your own use. It is licensed under the GNU General Public License v3.0. You can download, edit and copy it for your own use. I would really appreciate it if you would link to my profile and not to say that it's your own work.
 
 If you want to use the bot, you have to get a token and put it in the variable token in the Static.java file. The bot also posts a message in a specific guild when a new member joins the Discord server. Either you create a channel on your server and insert the channel id in GuildMemberJoin.java or comment the whole class out.
 
