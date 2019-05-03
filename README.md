@@ -5,6 +5,7 @@ If you want to use the bot, you have to get a token and put it in the variable t
 
 Commands:
 -clear
+
 With this command you can delete messages in the chat
 
 -help
