@@ -1,1 +1,5 @@
-
+#Remove IDE project files
+pom.xml
+*.iml
+.idea/
+target/
