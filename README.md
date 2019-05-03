@@ -4,8 +4,8 @@ This is a Discord bot programmed bot for your own use. It is licensed under the 
 If you want to use the bot, you have to get a token and put it in the variable token in the Static.java file. The bot also posts a message in a specific guild when a new member joins the Discord server. Either you create a channel on your server and insert the channel id in GuildMemberJoin.java or comment the whole class out.
 
 Commands:
--clear
 
+-clear
 With this command you can delete messages in the chat
 
 -help
@@ -24,4 +24,5 @@ With this command you can turn the filter on or off
 If you want to show me what you created out of my program, you surely can do so! I'm always happy to see which kind of commands and things people programmed.
 
 Have fun!
+
 -The-Last-Cookie
