@@ -1,8 +1,7 @@
 /*
-    Made by: not_by_me
+    Made by: The-Last-Cookie
     Date: 5th March 2019
-    Licensed under the GNU General Public License v3.0
-
+    Licensed under the GNU General Public License v3.0git pu
  */
 
 package main;
